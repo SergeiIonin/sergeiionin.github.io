@@ -8,14 +8,17 @@ has multiple consumers and we need to be able to quickly find the data or servic
 
 Handling of such contracts used across the platform may consist of the following stages:
 
-    1) Validate the contracts syntactically and semantically.
-    2) Versioning of the contracts (which interleaves with semantical validation).
-    3) Submit contracts through the pull request to the probably standalone contracts repository (where .proto files are hosted and probalby compiled) for human control.
+1) Validate the contracts syntactically and semantically.
+
+2) Versioning of the contracts (which interleaves with semantical validation).
+
+3) Submit contracts through the pull request to the probably standalone contracts repository (where .proto files are hosted and probalby compiled) for human control.
 
 The most intuitive approach of leveraging just a standalone contracts repository has a few drawbacks:
 
-    1) There's no protection from breaking semantical validity of the contract, e.g. the contract with the following diff is syntactically correct:
+1) There's no protection from breaking semantical validity of the contract, e.g. the contract with the following diff is syntactically correct:
 
+```shell
 "syntax = "proto3";
  - package users;
  + package users_new;
@@ -23,10 +26,11 @@ message GetUser {
   string id = 1
   string domain = 2
 }
+```
 
 however, semantically such contract should be a different one. It's not a new version of the current contract since the package is updated.
 
-    2) Provisioning of the semantical validity requires additional efforts.
+2) Provisioning of the semantical validity requires additional efforts.
 
-    3) Lack of the navigation for a specific contract name (such as fetch all versions, fetch last version etc)
+3) Lack of the navigation for a specific contract name (such as fetch all versions, fetch last version etc)
 
