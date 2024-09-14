@@ -1,4 +1,4 @@
-## Challenges in the .proto Contracts in Microservices
+## Challenges in Handling of the Protobuf-based Contracts in Microservices
 
 There are quite a lot of reasons to choose gRPC as the protocol of [communication between microservices](https://hackernoon.com/creating-production-grade-microservices-with-go-and-grpc). It is also well known that microservice-architecture brings a tone of challenges,
 including proper handling of the `.proto` files which are used for generation of client and server entities, and in particular - structures used for communication (classes in many programming languages).
