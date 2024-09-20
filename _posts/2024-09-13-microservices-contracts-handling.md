@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: "microservices-contracts-handling"
 date: 2024-09-13
 categories: microservices
