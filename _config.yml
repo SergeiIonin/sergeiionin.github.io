@@ -13,6 +13,8 @@ linkedin_username: "sergei-ionin-8a188a108"
 #########################################################################################
 theme: "minima"
 
+permalink: /articles/:categories/:title.html
+
 rss: rss
 
 kramdown:
